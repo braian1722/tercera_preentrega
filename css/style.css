@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.h1-index {
+  font-size: 5em;
+  animation-name: cambio;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+}
+
+@keyframes cambio {
+  from {
+    color: #c54343;
+  }
+  to {
+    color: rgb(151, 10, 10);
+  }
+}
+h1, h2, h3, h4 {
+  color: #c54343;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  background-color: #c54343;
+}
+
+.img-fondo {
+  background-image: url(https://www.nuria.com.ar/wp-content/uploads/2018/11/nuria-panaderia-galeria.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card h3 {
+  margin-top: 10px;
+}
+.card p {
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.descripcion p {
+  text-align: center;
+  color: black;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #c54343;
+}
+.redes-sociales img {
+  width: 40px;
+  margin: 20px;
+}
+.redes-sociales img:hover {
+  transform: scale(1.5);
+}
+
+.copy {
+  display: block;
+  background-color: #666;
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-areas: "descripcion redes-sociales" "descripcion redes-sociales" "copy copy";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 50px;
+    background-color: #c54343;
+    margin-bottom: 0;
+  }
+  .descripcion {
+    grid-area: descripcion;
+  }
+  .descripcion h4 {
+    color: black;
+  }
+  .redes-sociales {
+    grid-area: redes-sociales;
+  }
+  .copy {
+    grid-area: copy;
+  }
+}
+.boton, .form-container .Limpiar, .form-container .aceptar {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 45px;
+  background-image: url(https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700232/42280315-mano-panader%C3%ADa-dibujado-patr%C3%B3n-de-fondo-sin-fisuras.jpg);
+}
+.form-container h2, .form-container label {
+  text-decoration: underline;
+  margin: 10px;
+}
+.form-container .aceptar {
+  background-color: #c54343;
+}
+.form-container .Limpiar {
+  background-color: rgb(153, 155, 33);
+}
+
+.galeria-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  background-image: url(https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700232/42280315-mano-panader%C3%ADa-dibujado-patr%C3%B3n-de-fondo-sin-fisuras.jpg);
+}
+
+.foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  transition: all 1.2s;
+}
+.foto1 p, .foto2 p, .foto3 p, .foto4 p, .foto5 p, .foto6 p, .foto7 p, .foto8 p {
+  color: black;
+}
+.foto1:hover, .foto2:hover, .foto3:hover, .foto4:hover, .foto5:hover, .foto6:hover, .foto7:hover, .foto8:hover {
+  transform: scale(1.2);
+}
+
+.titulo-galeria {
+  margin: 10px;
+  color: #c54343;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .galeria-container {
+    display: grid;
+    grid-template-areas: "titulo-galeria titulo-galeria" "foto1 foto2" "foto3 foto4" "foto5 foto6" "foto7 foto8";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(4, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .galeria-container img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+  }
+  .foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8 {
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    height: 300px;
+    width: 300px;
+  }
+  .titulo-galeria {
+    grid-area: titulo-galeria;
+  }
+  .foto1 {
+    grid-area: foto1;
+  }
+  .foto2 {
+    grid-area: foto2;
+  }
+  .foto3 {
+    grid-area: foto3;
+  }
+  .foto4 {
+    grid-area: foto4;
+  }
+  .foto5 {
+    grid-area: foto5;
+  }
+  .foto6 {
+    grid-area: foto6;
+  }
+  .foto7 {
+    grid-area: foto7;
+  }
+  .foto8 {
+    grid-area: foto8;
+  }
+}
+@media (min-width: 992px) {
+  .galeria-container {
+    grid-template-areas: "titulo-galeria titulo-galeria titulo-galeria titulo-galeria" "foto1 foto2 foto3 foto4" "foto5 foto6 foto7 foto8";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(2, 1fr);
+  }
+}
+#info {
+  background-image: url(https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700232/42280315-mano-panader%C3%ADa-dibujado-patr%C3%B3n-de-fondo-sin-fisuras.jpg);
+}
+
+.t-info {
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  margin-top: 50px;
+}
+
+.row {
+  padding: 15px;
+}
+.row div {
+  transition: all 2s;
+}
+.row div:hover {
+  transform: scale(1.2);
+}
+.row p {
+  color: black;
+}
+.row h2 {
+  text-decoration: underline;
+}
+
+.ubicacion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  background-image: url(https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700232/42280315-mano-panader%C3%ADa-dibujado-patr%C3%B3n-de-fondo-sin-fisuras.jpg);
+}
+
+.ubicacion-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.ubicacion-itens iframe {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+@media (min-width: 768px) {
+  .ubicacion-itens iframe {
+    margin-bottom: 10px;
+    width: 500px;
+    height: 350px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

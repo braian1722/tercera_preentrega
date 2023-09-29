@@ -1,0 +1,39 @@
+.ubicacion-container{
+    
+    @include flex-column;
+    
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    background-image: url(https://previews.123rf.com/images/teploleta/teploleta1507/teploleta150700232/42280315-mano-panader%C3%ADa-dibujado-patr%C3%B3n-de-fondo-sin-fisuras.jpg);
+
+}
+
+.ubicacion-itens{
+
+    @include flex-column;
+
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+
+    iframe {
+        margin-bottom: 10px;
+        width: 200px;
+        height: 150px;
+    }
+
+
+}
+
+
+
+@media (min-width: 768px){
+
+    .ubicacion-itens iframe{
+        margin-bottom: 10px;
+        width: 500px;
+        height: 350px;
+    }
+    
+}

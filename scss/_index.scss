@@ -1,0 +1,157 @@
+@import "mixin";
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+img{
+    max-width: 100%;
+} 
+
+.h1-index{
+    font-size: 5em;
+    animation-name: cambio;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+
+}
+@keyframes cambio{
+    from {color: #c54343;};
+    to{color: rgb(151, 10, 10);};
+}
+
+h1,h2,h3,h4{
+    color: #c54343;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    background-color: #c54343;
+    
+}
+
+.img-fondo{
+    background-image: url(https://www.nuria.com.ar/wp-content/uploads/2018/11/nuria-panaderia-galeria.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 60vh;
+    width: 100%;
+
+}
+
+.cards-container{
+    @include flex-column;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h3 {
+        margin-top: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        
+    }
+
+}
+
+
+footer{
+    @include flex-column;
+    margin-top: 20px;
+}
+
+
+.descripcion{
+    @include flex-column;
+
+    p {
+        text-align: center;
+        color: black;
+    }
+    
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #c54343;
+
+    img {
+        width: 40px;
+        margin: 20px;
+
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+
+}
+
+
+.copy{
+    display: block;
+    background-color: #666;
+    width: 100%;
+    margin: 0;
+}
+
+@media (min-width: 768px){
+
+    footer{
+        display: grid;
+        grid-template-areas: 
+        "descripcion redes-sociales"
+        "descripcion redes-sociales"
+        "copy copy";
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr 50px;
+        background-color: #c54343;
+        
+        margin-bottom: 0;
+    }
+
+    .descripcion{
+        grid-area: descripcion;
+    }
+    .descripcion h4{
+        color: black;
+    }
+    .redes-sociales{
+
+        grid-area: redes-sociales;
+    }
+    .copy{
+        grid-area: copy;
+    }
+}
